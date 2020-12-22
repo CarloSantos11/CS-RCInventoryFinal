@@ -1,6 +1,6 @@
 package com.devnom.model;
 
-public class Shocks extends InventoryItem {
+public class Shocks extends Item {
     // Shocks like wheels/tires come in fours
     private final String skuNumber;
 

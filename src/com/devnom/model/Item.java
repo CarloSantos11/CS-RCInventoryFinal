@@ -3,13 +3,13 @@ package com.devnom.model;
 import static com.devnom.util.Helper.*;
 
 /**
- * All classes that implement InventoryItem must have a unique 9 digit sku number.
+ * All classes that implement Item must have a unique 9 digit sku number.
  */
-public abstract class InventoryItem implements IinventoryItem{
+public abstract class Item implements IinventoryItem{
     protected final String skuNumber;
 
 
-    public InventoryItem() {
+    public Item() {
         int skuNum = randomNumberGenerator();
         this.skuNumber = formatNumber(skuNum, 9);
     }

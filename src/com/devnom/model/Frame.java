@@ -1,8 +1,6 @@
 package com.devnom.model;
 
-import static com.devnom.util.Helper.formatNumber;
-
-public class Frame extends InventoryItem {
+public class Frame extends Item {
     private final String skuNumber;
 
     public Frame() {

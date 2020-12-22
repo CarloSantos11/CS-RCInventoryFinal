@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * This
  * @param <T> - The Type of the inventory list. ex: car, frame, shells, motors, etc.
  */
-public class ItemInventory<T extends  InventoryItem> {
+public class ItemInventory<T extends Item> {
     private final String inventoryType;
     private ArrayList<T> inventoryList;
 
@@ -37,6 +37,7 @@ public class ItemInventory<T extends  InventoryItem> {
         for (T item : inventoryList) {
             System.out.println(item);
         }
+        System.out.println();
         return "";
     }
 }

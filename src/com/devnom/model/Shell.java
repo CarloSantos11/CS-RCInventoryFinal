@@ -1,6 +1,6 @@
 package com.devnom.model;
 
-public abstract class Shell extends InventoryItem {
+public abstract class Shell extends Item {
     private final String skuNumber;
 
     public Shell() {

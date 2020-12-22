@@ -37,6 +37,7 @@ public class Cache {
         FactoryInventory.updateInventory("sportsShell", sportsShells);
         FactoryInventory.updateInventory("suvShell", suvShells);
 
-        System.out.println(FactoryInventory.inventoryCollection.get("suvShell"));
+//        System.out.println(FactoryInventory.inventoryCollection.get("suvShell"));
+        System.out.println(FactoryInventory.inventoryCollection);
     }
 }
