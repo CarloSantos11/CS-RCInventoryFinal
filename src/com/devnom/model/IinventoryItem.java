@@ -1,7 +1,7 @@
 package com.devnom.model;
 
 /**
- * Interface: Each Inventory will have an SKU number (Stock Keeping Unit).
+ * Interface: Each ItemInventory will have an SKU number (Stock Keeping Unit).
  *
  * SKU numbers are used to keep track of the movement of inventory
  */

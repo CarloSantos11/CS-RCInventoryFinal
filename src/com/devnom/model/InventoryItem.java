@@ -20,7 +20,7 @@ public abstract class InventoryItem implements IinventoryItem{
 
 //    @Override
 //    public String toString() {
-//        return "Inventory Type: " + this.getClass().getSimpleName() +
+//        return "ItemInventory Type: " + this.getClass().getSimpleName() +
 //                " | SKU: [" + this.getSKU() + "]";
 //    }
 

@@ -1,6 +1,6 @@
 package com.devnom.model;
 
-// Should this also extend Inventory Item or will the model
+// Should this also extend ItemInventory Item or will the model
 // number serve as our sku number/identifier
 
 import java.util.Arrays;

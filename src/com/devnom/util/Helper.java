@@ -25,5 +25,6 @@ public final class Helper {
     public static final String formatNumber(int convertNum, int placeValues) {
         String stringFormatter = "%0" + placeValues + "d";
         return String.format(stringFormatter ,convertNum);
+
     }
 }
