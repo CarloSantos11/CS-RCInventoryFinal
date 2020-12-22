@@ -4,16 +4,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public  class FactoryInventory {
-    static Map<String, ItemInventory> inventoryCollection;
+    public static Map<String, ItemInventory> inventoryCollection = new HashMap<>();
 
-    public FactoryInventory(){
-        inventoryCollection = new HashMap<>();
+    // I will refactor this logic to be in the service layer
+    public static void updateInventory(String inventoryType, ItemInventory itemInventory) {
+        inventoryCollection.put(inventoryType, itemInventory);
     }
 
-    public static void updateInventory(String inventoryType, InventoryItem item) {
-//        inventoryCollection.put(inventoryType, item);
-
+    public static void print() {
+        System.out.println(inventoryCollection);
     }
-
-
 }

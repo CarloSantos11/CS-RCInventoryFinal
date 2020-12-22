@@ -12,3 +12,8 @@ package com.devnom.util;
 public final class Const {
     public static final String VALUE_1 = "My first static value";
 }
+
+
+// create an object of hat
+// make sure u can add all the customizations
+// Create something to store that hat inventory

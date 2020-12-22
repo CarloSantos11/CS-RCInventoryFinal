@@ -4,7 +4,7 @@ import com.devnom.model.*;
 
 public class Cache {
     public static void main(String[] args) {
-        ItemInventory<Shell> classsicShells = new ItemInventory("Classic Shell");
+        ItemInventory<Shell> classicShells = new ItemInventory("Classic Shell");
         ItemInventory<Shell> sportsShells = new ItemInventory("Sports Shell");
         ItemInventory<Shell> suvShells = new ItemInventory("SUV Shell");
 
@@ -20,9 +20,9 @@ public class Cache {
         SUVShell suvShell2 = new SUVShell();
         SUVShell suvShell3 = new SUVShell();
 
-        classsicShells.addToInventory(classicShell1);
-        classsicShells.addToInventory(classicShell2);
-        classsicShells.addToInventory(classicShell3);
+        classicShells.addToInventory(classicShell1);
+        classicShells.addToInventory(classicShell2);
+        classicShells.addToInventory(classicShell3);
 
         sportsShells.addToInventory(sportsShells1);
         sportsShells.addToInventory(sportsShells2);
@@ -32,8 +32,11 @@ public class Cache {
         suvShells.addToInventory(suvShell2);
         suvShells.addToInventory(suvShell3);
 
-//        System.out.println(classsicShells);
-//        System.out.println(sportsShells);
-//        System.out.println(suvShells);
+
+        FactoryInventory.updateInventory("classicShells", classicShells);
+        FactoryInventory.updateInventory("sportsShell", sportsShells);
+        FactoryInventory.updateInventory("suvShell", suvShells);
+
+        System.out.println(FactoryInventory.inventoryCollection.get("suvShell"));
     }
 }
