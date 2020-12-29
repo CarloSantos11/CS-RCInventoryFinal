@@ -6,11 +6,13 @@ package com.devnom.model;
 import java.util.Arrays;
 
 public class Car {
-    Frame frame;
-    Shell shellType;
-    Motor motor;
-    Shocks[] shocks;
-    Wheel[] wheels;
+    private Frame frame;
+    private Shell shellType;
+    private Motor motor;
+    private Shocks[] shocks;
+    private Wheel[] wheels;
+    // Model number etc.
+    // UPC Prefix etc.
 
     public Car(Frame frame, Shell shell, Motor motor, Shocks[] shocks, Wheel[] wheels) {
         this.frame = frame;

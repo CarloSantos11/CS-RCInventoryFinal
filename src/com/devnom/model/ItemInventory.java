@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class ItemInventory<T extends Item> {
     private final String inventoryType;
-    private ArrayList<T> inventoryList;
+    protected ArrayList<T> inventoryList;
 
     /**
      * Constructor
@@ -19,9 +19,8 @@ public class ItemInventory<T extends Item> {
         inventoryList = new ArrayList<>();
     }
 
-    // this may belong more-so in the service
-    public void addToInventory(T item) {
-        inventoryList.add(item);
+    public ArrayList<T> getInventoryList() {
+        return this.inventoryList;
     }
 
     public String getType() {
@@ -31,6 +30,8 @@ public class ItemInventory<T extends Item> {
     public int getCount() {
         return this.inventoryList.size();
     }
+
+    // Consider Using string builder here
     @Override
     public String toString() {
         System.out.println(getType() + ": Total Count(" + getCount() + ")");

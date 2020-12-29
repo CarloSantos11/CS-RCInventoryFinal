@@ -4,8 +4,10 @@ import static com.devnom.util.Helper.*;
 
 /**
  * All classes that implement Item must have a unique 9 digit sku number.
+ *
+ * Still need to add remote control and batteries
  */
-public abstract class Item implements IinventoryItem{
+public abstract class Item implements IItem {
     protected final String skuNumber;
 
 
