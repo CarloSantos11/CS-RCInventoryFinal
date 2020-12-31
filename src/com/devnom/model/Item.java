@@ -3,13 +3,15 @@ package com.devnom.model;
 import static com.devnom.util.Helper.*;
 
 /**
- * All classes that implement InventoryItem must have a unique 9 digit sku number.
+ * All classes that implement Item must have a unique 9 digit sku number.
+ *
+ * Still need to add remote control and batteries
  */
-public abstract class InventoryItem implements IinventoryItem{
+public abstract class Item implements IItem {
     protected final String skuNumber;
 
 
-    public InventoryItem() {
+    public Item() {
         int skuNum = randomNumberGenerator();
         this.skuNumber = formatNumber(skuNum, 9);
     }
@@ -20,7 +22,7 @@ public abstract class InventoryItem implements IinventoryItem{
 
 //    @Override
 //    public String toString() {
-//        return "Inventory Type: " + this.getClass().getSimpleName() +
+//        return "ItemInventory Type: " + this.getClass().getSimpleName() +
 //                " | SKU: [" + this.getSKU() + "]";
 //    }
 

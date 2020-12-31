@@ -1,6 +1,8 @@
 package com.devnom.util;
 
+import java.util.InputMismatchException;
 import java.util.Random;
+import java.util.Scanner;
 
 public final class Helper {
     public static Random randoTest = new Random();
@@ -25,5 +27,15 @@ public final class Helper {
     public static final String formatNumber(int convertNum, int placeValues) {
         String stringFormatter = "%0" + placeValues + "d";
         return String.format(stringFormatter ,convertNum);
+
     }
+
+    public static final String getUserInput(){
+        // could be number or string. Casting may be necessary
+        Scanner userInput = new Scanner(System.in);
+        String input = userInput.nextLine();
+        input.trim();
+        return input;
+    }
+
 }

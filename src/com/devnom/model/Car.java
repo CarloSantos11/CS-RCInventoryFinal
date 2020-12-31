@@ -1,16 +1,18 @@
 package com.devnom.model;
 
-// Should this also extend Inventory Item or will the model
+// Should this also extend ItemInventory Item or will the model
 // number serve as our sku number/identifier
 
 import java.util.Arrays;
 
 public class Car {
-    Frame frame;
-    Shell shellType;
-    Motor motor;
-    Shocks[] shocks;
-    Wheel[] wheels;
+    private Frame frame;
+    private Shell shellType;
+    private Motor motor;
+    private Shocks[] shocks;
+    private Wheel[] wheels;
+    // Model number etc.
+    // UPC Prefix etc.
 
     public Car(Frame frame, Shell shell, Motor motor, Shocks[] shocks, Wheel[] wheels) {
         this.frame = frame;

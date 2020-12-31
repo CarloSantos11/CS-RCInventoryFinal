@@ -1,6 +1,6 @@
 package com.devnom.model;
 
-public abstract class Wheel extends InventoryItem {
+public abstract class Wheel extends Item {
     private final String skuNumber;
 
     public Wheel() {

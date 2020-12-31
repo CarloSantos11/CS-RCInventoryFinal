@@ -1,7 +1,7 @@
 package com.devnom.model;
 
 /**
- * Inherits from Shell and InventoryItem
+ * Inherits from Shell and Item
  */
 public class ClassicShell extends Shell {
     private final String skuNumber;

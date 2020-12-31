@@ -1,0 +1,9 @@
+I will add logic here to print through our inventory
+    - single inventory type
+    - print the entire collection
+
+I will add the logic to add to each kind of inventory
+
+NEED TO CREATE ORDER POJO
+- items in our order (array)
+- total price
