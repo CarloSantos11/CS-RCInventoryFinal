@@ -1,9 +1,7 @@
 package com.devnom.controller;
 
-import com.devnom.model.Item;
+import com.devnom.service.AppService;
 import com.devnom.view.AppView;
-
-import static com.devnom.service.AppService.*;
 import static com.devnom.util.Helper.*;
 
 /**
@@ -16,8 +14,12 @@ public class AppController {
      * displaying our menu
      */
     public static void runApplication(){
-        AppView.openingMenu();
-        inventoryActions(getUserInput());
+        String userInput = "";
+
+        while (!userInput.equalsIgnoreCase("Q")) {
+            AppView.openingMenu();
+            inventoryActions(getUserInput());
+        }
     }
 
     private static String inventoryActions(String choice) {
@@ -29,16 +31,18 @@ public class AppController {
                 choice = "2";
                 break;
             case "3":
-//                 // This should give us the ability to add something to the inventory
-                 // CURRENT CHECK
                 addToInventory();
                 break;
             case "4":
 //                buildCar();
                 choice = "4";
                 break;
+            case "5":
+//              loadUpTestInventoryData();
+                break;
             case "Q":
-                choice="Q";
+            case "q":
+                System.exit(0);
                 break;
             default:
 //                InventoryUi.invalidInputPrompt("Choice");
@@ -52,36 +56,42 @@ public class AppController {
     private static void addToInventory(){
         AppView.addToInventoryMenu();
         String option = getUserInput();
-        addToInventoryAction(option);
+        addInventoryTypeAction(option);
     }
 
-    private static void addToInventoryAction(String choice) {
+    private static void addInventoryTypeAction(String choice) {
         // Must catch the case fo 2a and 2A
         switch (choice) {
             case "1":
-                // Add Frame to inventory
-//                addItem(inventory, Item item);
+                AppService.addItem("Frame");
                 break;
             case "2A":
                 // Add Classic Shell to inventory
+                AppService.addItem("Classic Shell");
                 break;
             case"2B":
                 // Add Classic Shell to inventory
+                AppService.addItem("Sport Shell");
                 break;
             case"2C":
                 // Add Classic Shell to inventory
+                AppService.addItem("SUV Shell");
                 break;
             case"3":
                 // Add Motor to Inventory
+                AppService.addItem("Motor");
                 break;
             case"4":
                 // Add Shocks to Inventory
+                AppService.addItem("Shocks");
                 break;
             case"5A":
                 // Add Standard Wheels
+                AppService.addItem("Standard Wheels");
                 break;
             case"5B":
                 // Add Wide Wheels
+                AppService.addItem("Wide Wheels");
                 break;
             case"Q":
                 // Should execute the ability to quit
