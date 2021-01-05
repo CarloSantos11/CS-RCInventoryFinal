@@ -1,9 +1,9 @@
 package com.devnom.service;
 
-import com.devnom.model.FactoryInventory;
-import com.devnom.model.Frame;
-import com.devnom.model.Item;
-import com.devnom.model.ItemInventory;
+import com.devnom.model.*;
+import com.devnom.view.AppView;
+
+import static com.devnom.util.Helper.getUserInput;
 
 public class AppService {
 //    public static void addToInventory
@@ -13,14 +13,27 @@ public class AppService {
         FactoryInventory.print();
     }
 
+    // Gives the ability to add multiple items
+    public static void addItems(String itemType) {
+        AppView.promptForCount();
+        int amount = (Integer.parseInt(getUserInput()));
+
+        for(int i = 0; i < amount; i++) {
+            Item itemInstance = createInventoryObject(itemType);
+            addToInventory(FactoryInventory.inventoryCollection.get("Frame"),itemInstance);
+        }
+
+        FactoryInventory.print();
+    }
+
     public static Item createInventoryObject(String inventoryObject) {
         switch (inventoryObject) {
             case "Frame":
                  return new Frame();
-//            case "Classic Shell":
-//                break;
-//            case "SUV Shell":
-//                break;
+            case "Classic Shell":
+                return new ClassicShell();
+            case "SUV Shell":
+                return new SUVShell();
 //            case "Sports Shell":
 //                break;
 //            case "Motor":

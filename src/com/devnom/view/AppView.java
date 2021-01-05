@@ -37,4 +37,9 @@ public class AppView {
                         "\tQ to exit...\n"
         );
     }
+
+    public static void promptForCount() {
+        System.out.println("How Many of this item are we adding?");
+    }
+
 }
